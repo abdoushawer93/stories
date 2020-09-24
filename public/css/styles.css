@@ -1,0 +1,158 @@
+@font-face {
+    font-family: 'Nunito';
+    src:url("../fonts/Nunito.ttf");
+}
+body ,html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito';
+}
+a{
+    text-decoration: none;
+}
+h1.title{
+    text-align: center;
+    color: #777;
+    font-weight: normal;
+    font-size: 70px;
+}
+div.links{
+    font-weight: bold;
+    text-align: center;
+}
+div.links a {
+    font-size: 15px;
+    color: #777;
+    margin: auto 20px;
+}
+.content {
+    width: 60%;
+    margin: 30px auto;
+    background: #e9ecef;
+    border: 1px solid #e9ecef;
+    border-radius: 5px;
+    padding: 50px 30px;
+    min-height: 120px;
+}
+.content h1 {
+    color: #777;
+    font-weight: normal;
+    font-size: 40px;
+    margin: 0;
+}
+.content p {
+    color: #777;
+    font-weight: normal;
+    font-size: 18px;
+    margin: 0;
+}
+.items {
+    width: 80%;
+    margin: 20px auto;
+    padding: 30px;
+    min-height: 120px;
+}
+.items .item {
+    width: 230px;
+    height: 200px;
+    border-radius: 5px;
+    border: 1px solid #bbb;
+    margin: 5px;
+    display: inline-block;
+    padding: 10px;
+    float: left;
+}
+.items .item a {
+    font-size: 16px;
+    color: #777;
+}
+.items .item p {
+    font-size: 14px;
+    color: #888;
+}
+.items .item .buttons {
+    height: auto;
+    padding: 10px;
+    margin-top: 80px;
+}
+.items .item .buttons a.btn {
+    background: #fff;
+    font-size: 12px;
+    border: 1px solid blue;
+    border-radius: 5px;
+    width: 120px;
+    padding: 5px 10px;
+    margin: 1px;
+    color: blue;
+    left: 0; bottom: 0;
+    position: relative;
+}
+.items .item .buttons form button[type='submit'] {
+    background: #fff;
+    font-size: 12px;
+    border: 1px solid red;
+    border-radius: 5px;
+    padding: 7px;
+    color: red;
+    outline: 0;
+    cursor: pointer;
+}
+.items form {
+    width: 80%;
+    margin: 20px auto;
+}
+.items form div.row {
+    width: 100%;
+    margin-top: 20px;
+}
+.items form  div.row label {
+    font-size: 18px;
+    color: #777;
+    width: 15%;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+.items form  div.row input , textarea {
+    font-size: 16px;
+    color: #777;
+    width: 70%;
+    display: inline;
+    border: 1px solid #ddd;
+    padding: 10px 30px;
+    border-radius: 5px;
+    float: left;
+    resize: none;
+}
+.items form  div.row input:focus , textarea:focus {
+    border: 1px solid #eee;
+    outline: 0;
+    box-shadow: 0px 0px 3px #58b2d0;
+}
+.items form  div.row button.btn-submit {
+    width: 90px;
+    height: 40px;
+    background: #304eff;
+    color: #fff;
+    border: 1px solid #304eff;
+    font-family: 'Nunito';
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px;
+    cursor: pointer;
+}
+.items form  div.row button.btn-submit:focus {
+    outline: 0;
+}
+.alert-danger
+{
+    width: 80%;  height: 30px; background: #f8d7da; color: #721c24;
+    border: 1px solid #f5c6cb; padding: 10px 20px; border-radius: 5px;
+    font-size: 17px;
+}
+
+
+
+
