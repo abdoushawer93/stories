@@ -50,8 +50,8 @@ class StoryController extends Controller
         }
         else {
             $story = Story::create($request->all());
-            $error = false;
-            return redirect(route('stories.index',$error));
+            $success = true;
+            return view('stories.index',compact('success'),['stories' => Story::all()]);
         }
     }
 
@@ -99,6 +99,7 @@ class StoryController extends Controller
     public function destroy(story $story)
     {
         $story->delete();
-        return redirect(route('stories.index'));
+        $deleted = true;
+        return view('stories.index',compact('deleted'),['stories' => Story::all()]);
     }
 }

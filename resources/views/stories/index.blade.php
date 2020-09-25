@@ -18,21 +18,29 @@
             </div>
         @else
             <div class="items">
-            @foreach($stories as $story)
-                <div class="item">
-                    <a href="{{ route('stories.show',$story) }}"><i class="fa fa-arrow-right"></i> {{ substr($story->title ,0 ,20) }} </a>
-                    <p> <i class="fa fa-indent"></i> {{ substr($story->content ,0 ,50) }} ...</p>
-                    <div class="buttons">
-                        <a href="{{ route('stories.show',$story) }}" class="btn"><i class="fa fa-list-ul"></i> Details</a>
-                        <a href="{{ route('stories.edit',$story) }}" class="btn"><i class="fa fa-edit"></i> Edit</a>
-                        <form action="{{ route('stories.destroy',$story) }}" method="POST" style="display: inline;">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit"><i class="fa fa-trash"></i> Delete </button>
-                        </form>
+                @if(isset($success) && $success == true)
+                    <p class="alert-success"> Story is Successfully Saved </p>
+                    <meta http-equiv="refresh" content="5;{{ route('stories.index') }}" />
+                @endif
+                @if(isset($deleted) && $deleted == true)
+                    <p class="alert-success"> Story is Successfully Deleted </p>
+                    <meta http-equiv="refresh" content="5;{{ route('stories.index') }}" />
+                @endif
+                @foreach($stories as $story)
+                    <div class="item">
+                        <a href="{{ route('stories.show',$story) }}"><i class="fa fa-arrow-right"></i> {{ substr($story->title ,0 ,20) }} </a>
+                        <p> <i class="fa fa-indent"></i> {{ substr($story->content ,0 ,50) }} ...</p>
+                        <div class="buttons">
+                            <a href="{{ route('stories.show',$story) }}" class="btn"><i class="fa fa-list-ul"></i> Details</a>
+                            <a href="{{ route('stories.edit',$story) }}" class="btn"><i class="fa fa-edit"></i> Edit</a>
+                            <form action="{{ route('stories.destroy',$story) }}" method="POST" style="display: inline;">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit"><i class="fa fa-trash"></i> Delete </button>
+                            </form>
+                        </div>
                     </div>
-                </div>
-            @endforeach
+                @endforeach
             </div>
         @endif
     </body>
